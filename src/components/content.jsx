@@ -18,6 +18,7 @@ const Content = ({
   erasTotalStake,
   activeEra,
 }) => {
+  let className= 'badge badge-pill badge-success m-4';
   function subscribe() {
     subscription(address);
     toaster.notify("Subscribe to chain updates !!", {
@@ -38,10 +39,11 @@ const Content = ({
     }, 10000);
   }
   return (
+    
     <React.Fragment>
       <div>
         ADDRESS
-        <span className="badge badge-pill badge-success m-4">
+        <span className={className}>
           {addressOnDevChain}
         </span>
         <button
@@ -58,20 +60,20 @@ const Content = ({
         TIMESTAMP
         <span className="badge badge-pill badge-success m-3"> {timestamp}</span>
         NONCE
-        <span className="badge badge-pill badge-success m-4">{nonce}</span>
+        <span className={className}>{nonce}</span>
         BALANCE
-        <span className="badge badge-pill badge-success m-4">{balance}</span>
+        <span className={className}>{balance}</span>
         VALIDATOR COUNT
-        <span className="badge badge-pill badge-success m-4">
+        <span className={className}>
           {validatorCount}
         </span>
         <div>
           ERA TOTAL STAKE
-          <span className="badge badge-pill badge-success m-4">
+          <span className={className}>
             {erasTotalStake}
           </span>
           ACTIVE ERA INDEX
-          <span className="badge badge-pill badge-success m-4">
+          <span className={className}>
             {activeEra}
           </span>
         </div>
@@ -83,11 +85,11 @@ const Content = ({
             {SessionIndex}
           </span>
           AUTHORED BLOCKS
-          <span className="badge badge-pill badge-success m-4">
+          <span className={className}>
             {authoredBlocks}
           </span>
           HEART BEAT AFTER
-          <span className="badge badge-pill badge-success m-4">
+          <span className={className}>
             {heartbeatAfter}
           </span>
         </div>

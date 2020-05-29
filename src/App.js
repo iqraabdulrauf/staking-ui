@@ -83,6 +83,7 @@ class App extends Component {
           nodeName={nodeName}
           lastblock={lastblock}
           nodeVersion={nodeVersion}
+          className='badge badge-pill badge-success m-4'
         ></Navbar>
 
         <main className="container">

@@ -1,20 +1,22 @@
 import React from "react";
 
 //Stateless functional component
-const Navbar = ({ chainname, nodeName, lastblock, nodeVersion }) => {
+const Navbar = ({ chainname, nodeName, lastblock, nodeVersion ,className}) => {
+
   return (
+
     <nav className="navbar navbar-light bg-light ">
       <a className="navbar-brand" href="#none">
         CHAIN
-        <span className="badge badge-pill badge-success m-4">{chainname}</span>
+        <span className={className}>{chainname}</span>
         NODE
-        <span className="badge badge-pill badge-success m-4">{nodeName}</span>
+        <span className={className}>{nodeName}</span>
         NODE VERSION
-        <span className="badge badge-pill badge-success m-4">
+        <span className={className}>
           {nodeVersion}
         </span>
         LAST BLOCK
-        <span className="badge badge-pill badge-success m-4">{lastblock}</span>
+        <span className={className}>{lastblock}</span>
       </a>
     </nav>
   );
